@@ -1,0 +1,10 @@
+# Ignore Robot Framework generated files
+report.html
+output.xml
+log.html
+
+# Ignore GeckoDriver log file
+geckodriver-1.log
+
+# Ignore virtual environment directory
+.venv/
