@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2 (Python 3.13.1 on win32)" generated="2025-02-01T11:23:39.017372" rpa="false" schemaversion="5">
+<suite id="s1" name="Demo1" source="C:\Users\kemtej01\PycharmProjects\Robot_2025\Tests\demo1.robot">
+<test id="s1-t1" name="TC1: Test case section" line="10">
+<kw name="Open the chrome browser and navigate to the application url">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-02-01T11:23:39.291387" level="INFO">Opening browser 'Chrome' to base url 'https://www.globalsqa.com/angularJs-protractor/BankingProject/#/login'.</msg>
+<arg>https://www.globalsqa.com/angularJs-protractor/BankingProject/#/login</arg>
+<arg>Chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-02-01T11:23:39.291254" elapsed="4.084951"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-02-01T11:23:48.377062" level="INFO">Slept 5 seconds.</msg>
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-02-01T11:23:43.376374" elapsed="5.000881"/>
+</kw>
+<status status="PASS" start="2025-02-01T11:23:39.290805" elapsed="9.086641"/>
+</kw>
+<kw name="Maximize the browser window">
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-02-01T11:23:48.378663" elapsed="0.039306"/>
+</kw>
+<status status="PASS" start="2025-02-01T11:23:48.378289" elapsed="0.039860"/>
+</kw>
+<kw name="Verify the user is in home page">
+<kw name="Get Location" owner="SeleniumLibrary">
+<msg time="2025-02-01T11:23:48.424666" level="INFO">${current_url} = https://www.globalsqa.com/angularJs-protractor/BankingProject/#/login</msg>
+<var>${current_url}</var>
+<doc>Returns the current browser window URL.</doc>
+<status status="PASS" start="2025-02-01T11:23:48.419029" elapsed="0.005695"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>The current url is: ${current_url}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-02-01T11:23:48.424894" elapsed="0.000352"/>
+</kw>
+<kw name="Get Title" owner="SeleniumLibrary">
+<msg time="2025-02-01T11:23:48.429793" level="INFO">${current_title} = XYZ Bank</msg>
+<var>${current_title}</var>
+<doc>Returns the title of the current page.</doc>
+<status status="PASS" start="2025-02-01T11:23:48.425411" elapsed="0.004428"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>The current page title is: ${current_title}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-02-01T11:23:48.429969" elapsed="0.000315"/>
+</kw>
+<status status="PASS" start="2025-02-01T11:23:48.418618" elapsed="0.011745"/>
+</kw>
+<status status="PASS" start="2025-02-01T11:23:39.290125" elapsed="9.140457"/>
+</test>
+<doc>TC1: Demo1 robot</doc>
+<status status="PASS" start="2025-02-01T11:23:39.019129" elapsed="9.412156"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Demo1" id="s1" pass="1" fail="0" skip="0">Demo1</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
