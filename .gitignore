@@ -11,3 +11,9 @@ geckodriver-1.log
 
 # Ignore JetBrains IDE configuration files
 .idea/
+
+# Ignore pabot suite files
+.pabotsuitenames
+
+# Ignore pabot_results folder
+pabot_results/

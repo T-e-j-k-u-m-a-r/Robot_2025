@@ -1,59 +1,124 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.2 (Python 3.13.1 on win32)" generated="2025-02-01T11:23:39.017372" rpa="false" schemaversion="5">
-<suite id="s1" name="Demo1" source="C:\Users\kemtej01\PycharmProjects\Robot_2025\Tests\demo1.robot">
-<test id="s1-t1" name="TC1: Test case section" line="10">
-<kw name="Open the chrome browser and navigate to the application url">
+<robot generator="Robot 7.2 (Python 3.13.1 on win32)" generated="2025-02-02T16:24:07.513989" rpa="false" schemaversion="5">
+<suite id="s1" name="LoginTest" source="C:\Users\kemtej01\PycharmProjects\Robot_2025\Tests\LoginTest.robot">
+<test id="s1-t1" name="Login test with valid credentials" line="9">
+<kw name="Open browser and navigate to application url with headed mode" owner="loginpage">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2025-02-01T11:23:39.291387" level="INFO">Opening browser 'Chrome' to base url 'https://www.globalsqa.com/angularJs-protractor/BankingProject/#/login'.</msg>
-<arg>https://www.globalsqa.com/angularJs-protractor/BankingProject/#/login</arg>
-<arg>Chrome</arg>
+<msg time="2025-02-02T16:24:08.114113" level="INFO">Opening browser 'Chrome' to base url 'https://practicetestautomation.com/practice-test-login/'.</msg>
+<arg>${app_url}</arg>
+<arg>${browser_name_headedmode}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2025-02-01T11:23:39.291254" elapsed="4.084951"/>
+<status status="PASS" start="2025-02-02T16:24:08.113880" elapsed="6.304532"/>
 </kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2025-02-01T11:23:48.377062" level="INFO">Slept 5 seconds.</msg>
-<arg>5s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-02-01T11:23:43.376374" elapsed="5.000881"/>
+<status status="PASS" start="2025-02-02T16:24:08.113279" elapsed="6.305810"/>
 </kw>
-<status status="PASS" start="2025-02-01T11:23:39.290805" elapsed="9.086641"/>
-</kw>
-<kw name="Maximize the browser window">
+<kw name="Maximize the browser window" owner="loginpage">
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2025-02-01T11:23:48.378663" elapsed="0.039306"/>
+<status status="PASS" start="2025-02-02T16:24:14.421254" elapsed="0.042717"/>
 </kw>
-<status status="PASS" start="2025-02-01T11:23:48.378289" elapsed="0.039860"/>
+<status status="PASS" start="2025-02-02T16:24:14.420045" elapsed="0.044198"/>
 </kw>
-<kw name="Verify the user is in home page">
-<kw name="Get Location" owner="SeleniumLibrary">
-<msg time="2025-02-01T11:23:48.424666" level="INFO">${current_url} = https://www.globalsqa.com/angularJs-protractor/BankingProject/#/login</msg>
-<var>${current_url}</var>
-<doc>Returns the current browser window URL.</doc>
-<status status="PASS" start="2025-02-01T11:23:48.419029" elapsed="0.005695"/>
+<kw name="Verify the user is in login page" owner="loginpage">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-02-02T16:24:14.509682" level="INFO">Element 'css:section[id='login'] h2' is displayed.</msg>
+<arg>${login_text_in_login_page}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-02-02T16:24:14.465618" elapsed="0.044301"/>
 </kw>
-<kw name="Log To Console" owner="BuiltIn">
-<arg>The current url is: ${current_url}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2025-02-01T11:23:48.424894" elapsed="0.000352"/>
+<status status="PASS" start="2025-02-02T16:24:14.464938" elapsed="0.045207"/>
 </kw>
-<kw name="Get Title" owner="SeleniumLibrary">
-<msg time="2025-02-01T11:23:48.429793" level="INFO">${current_title} = XYZ Bank</msg>
-<var>${current_title}</var>
-<doc>Returns the title of the current page.</doc>
-<status status="PASS" start="2025-02-01T11:23:48.425411" elapsed="0.004428"/>
+<kw name="Enter user name" owner="loginpage">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-02-02T16:24:14.511442" level="INFO">Typing text 'student' into text field 'css:#username'.</msg>
+<arg>${username_text_box}</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-02T16:24:14.510986" elapsed="0.120399"/>
 </kw>
-<kw name="Log To Console" owner="BuiltIn">
-<arg>The current page title is: ${current_title}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2025-02-01T11:23:48.429969" elapsed="0.000315"/>
+<status status="PASS" start="2025-02-02T16:24:14.510705" elapsed="0.120929"/>
 </kw>
-<status status="PASS" start="2025-02-01T11:23:48.418618" elapsed="0.011745"/>
+<kw name="Enter password" owner="loginpage">
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2025-02-02T16:24:14.632599" level="INFO">Typing password into text field 'css:#password'.</msg>
+<msg time="2025-02-02T16:24:14.671905" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>${password_text_box}</arg>
+<arg>${password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-02T16:24:14.632356" elapsed="0.099909"/>
 </kw>
-<status status="PASS" start="2025-02-01T11:23:39.290125" elapsed="9.140457"/>
+<status status="PASS" start="2025-02-02T16:24:14.632035" elapsed="0.100634"/>
+</kw>
+<kw name="Click on login page" owner="loginpage">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-02-02T16:24:14.733981" level="INFO">Clicking element 'css:#submit'.</msg>
+<arg>${submit_login_btn}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-02T16:24:14.733703" elapsed="0.851779"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-02-02T16:24:18.587220" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-02-02T16:24:15.585955" elapsed="3.001425"/>
+</kw>
+<status status="PASS" start="2025-02-02T16:24:14.733293" elapsed="3.854234"/>
+</kw>
+<kw name="Verify the login is success" owner="homepage">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-02-02T16:24:18.639223" level="INFO">Element 'css:p[class='has-text-align-center'] strong' is displayed.</msg>
+<arg>css:p[class='has-text-align-center'] strong</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-02-02T16:24:18.588578" elapsed="0.050801"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-02-02T16:24:18.673244" level="INFO">Element 'css:.post-title' is displayed.</msg>
+<arg>css:.post-title</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-02-02T16:24:18.639647" elapsed="0.033750"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-02-02T16:24:21.674086" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-02-02T16:24:18.673619" elapsed="3.000711"/>
+</kw>
+<status status="PASS" start="2025-02-02T16:24:18.588196" elapsed="3.086485"/>
+</kw>
+<kw name="Logout from the application" owner="homepage">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-02-02T16:24:21.676657" level="INFO">Clicking element 'xpath://a[normalize-space()='Log out']'.</msg>
+<arg>${logout_btn}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-02T16:24:21.675971" elapsed="0.787785"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-02-02T16:24:25.465646" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-02-02T16:24:22.464300" elapsed="3.001700"/>
+</kw>
+<status status="PASS" start="2025-02-02T16:24:21.675449" elapsed="3.790863"/>
+</kw>
+<kw name="Verify the user is in login page" owner="loginpage">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-02-02T16:24:25.499128" level="INFO">Element 'css:section[id='login'] h2' is displayed.</msg>
+<arg>${login_text_in_login_page}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-02-02T16:24:25.468265" elapsed="0.031013"/>
+</kw>
+<status status="PASS" start="2025-02-02T16:24:25.467519" elapsed="0.031915"/>
+</kw>
+<kw name="Close browser window" owner="generic">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-02-02T16:24:25.500838" elapsed="2.821253"/>
+</kw>
+<status status="PASS" start="2025-02-02T16:24:25.500378" elapsed="2.822038"/>
+</kw>
+<status status="PASS" start="2025-02-02T16:24:08.112618" elapsed="20.210780"/>
 </test>
-<doc>TC1: Demo1 robot</doc>
-<status status="PASS" start="2025-02-01T11:23:39.019129" elapsed="9.412156"/>
+<status status="PASS" start="2025-02-02T16:24:07.516533" elapsed="20.808403"/>
 </suite>
 <statistics>
 <total>
@@ -62,7 +127,7 @@
 <tag>
 </tag>
 <suite>
-<stat name="Demo1" id="s1" pass="1" fail="0" skip="0">Demo1</stat>
+<stat name="LoginTest" id="s1" pass="1" fail="0" skip="0">LoginTest</stat>
 </suite>
 </statistics>
 <errors>
