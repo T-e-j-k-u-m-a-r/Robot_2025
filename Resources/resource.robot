@@ -7,5 +7,4 @@ ${app_url}                     https://www.globalsqa.com/angularJs-protractor/Ba
 ${browser_name_headed}         Chrome
 ${browser_name_headless}       headlesschrome
 
-
 *** Keywords ***
