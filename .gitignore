@@ -17,3 +17,6 @@ geckodriver-1.log
 
 # Ignore pabot_results folder
 pabot_results/
+
+# Ignore results folder
+Results/
