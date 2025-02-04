@@ -3,7 +3,7 @@
 Library     SeleniumLibrary
 Library     Collections
 
-Resource        ../../Resources/bank/AccountPage.robot
+Resource        ../../Resources/bank/AccountPage.robot  
 Resource        ../../Resources/bank/CustomerPage.robot
 Resource        ../../Resources/resource.robot
 
@@ -50,4 +50,7 @@ Select the customer from the dropdown and click on login button
     Click Element       ${login_btn}
     Sleep       4s
 
+Click on bank manager login
+     Click Element      ${bank_manager_login_btn}
+     Sleep      4s
 

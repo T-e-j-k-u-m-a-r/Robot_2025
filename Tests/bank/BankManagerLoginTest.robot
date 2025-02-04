@@ -4,13 +4,13 @@ Documentation       Login test to XYZ bank with customer login
 Resource        ../../Resources/resource.robot
 Resource        ../../Resources/bank/CustomerPage.robot
 Resource        ../../Resources/bank/LoginPage.robot
-Resource        ../../Resources/bank/AccountPage.robot
+Resource        ../../Resources/bank/ManagerPage.robot
 
 Test Setup          LoginPage.Open browser and launch the application url     ${xyz_bank_url}         ${browser_name_headed}
 Test Teardown       resource.Close the browser window
 
 *** Test Cases ***
-Test Login Functionality
+Test Bank Manager Login Functionality
         [Tags]    smoke
         resource.Maximize the browser window
         LoginPage.Verify the user is in the login page
@@ -18,11 +18,14 @@ Test Login Functionality
         LoginPage.Print the page title
         LoginPage.Print the page current url
         LoginPage.Verify the display of bank name in the login screen
-        LoginPage.Click on Customer Login menu
-        LoginPage.Select the customer from the dropdown and click on login button
-        CustomerPage.Verify the login is success
-        CustomerPage.Logout from the application
+        LoginPage.Click on bank manager login
+        ManagerPage.Verify if the page current url contains manager in it
+        ManagerPage.Verify the home page of bank manager contains add customer menu
+        ManagerPage.Verify the home page of bank manager contains open account menu
+        ManagerPage.Verify the home page of bank manager contains customers menu
+        ManagerPage.Click on home menu
         LoginPage.Verify the user is in the login page
+
 
 
 

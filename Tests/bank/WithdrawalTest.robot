@@ -21,8 +21,8 @@ ${amount_to_be_withdrawn}       xpath://label[normalize-space()='Amount to be Wi
 ${withdrawl_btn}                xpath://button[normalize-space()='Withdraw']
 
 *** Test Cases ***
-Test Withdrawal Functionality
-        [Tags]    smoke
+Test Customer Withdrawal Functionality
+        [Tags]    smoke     ui
         resource.Maximize the browser window
         LoginPage.Verify the user is in the login page
         LoginPage.Verify there are 2 types of login present in this screen
