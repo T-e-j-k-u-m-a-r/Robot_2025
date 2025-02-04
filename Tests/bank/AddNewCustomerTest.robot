@@ -20,8 +20,6 @@ Test Add New and Delete the newly created Customer Functionality
         LoginPage.Verify the display of bank name in the login screen
         LoginPage.Click on bank manager login
         ManagerPage.Verify if the page current url contains manager in it
-
-
         ManagerPage.Click on the add customer menu
         ManagerPage.Verify the presence of first name label
         ManagerPage.Enter first name value
@@ -36,8 +34,6 @@ Test Add New and Delete the newly created Customer Functionality
         ManagerPage.verify the table has the first name of the newly created customer
         ManagerPage.click on delete the newly created customer
         ManagerPage.verify the table doesn not have the first name of the newly created customer
-
-
         ManagerPage.Click on home menu
         LoginPage.Verify the user is in the login page
 
