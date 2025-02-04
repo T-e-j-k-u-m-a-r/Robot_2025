@@ -1,5 +1,5 @@
 *** Settings ***
-Documentation       Login test to XYZ bank with customer login
+Documentation       Scope:Test Add New and Delete the newly created Customer Functionality
 
 Resource        ../../Resources/resource.robot
 Resource        ../../Resources/bank/CustomerPage.robot

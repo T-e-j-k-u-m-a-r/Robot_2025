@@ -1,5 +1,5 @@
 *** Settings ***
-Documentation       Login test to XYZ bank with customer login
+Documentation       Scope:Test Customer Withdrawal Functionality
 
 Library     SeleniumLibrary
 Library     Collections

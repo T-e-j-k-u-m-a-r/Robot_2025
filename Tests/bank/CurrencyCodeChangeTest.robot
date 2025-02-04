@@ -1,5 +1,5 @@
 *** Settings ***
-Documentation       Login test to XYZ bank with customer login
+Documentation       Scope:Currency Code Changes Functionality
 
 Resource        ../../Resources/resource.robot
 Resource        ../../Resources/bank/CustomerPage.robot
