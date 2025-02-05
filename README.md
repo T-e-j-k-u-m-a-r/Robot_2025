@@ -7,11 +7,11 @@ ROBOT commands for executing scripts from bank folder
 
 How to run all the robot files: 
 
-		robot -d Results Tests/automation/bank/*.robot
+		robot -d Results Tests/bank/*.robot
 
 How to run all the robot files: 
 
-		robot -d Results Tests/automation/bank/LoginTest.robot
+		robot -d Results Tests/bank/LoginTest.robot
 
 ----------------------------------------------------------------------------------------
 
