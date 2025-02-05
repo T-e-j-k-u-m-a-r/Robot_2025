@@ -10,7 +10,7 @@ Test Teardown       resource.Close the browser window
 
 *** Test Cases ***
 Test Customer Login Functionality
-        [Tags]    smoke     ui
+        [Tags]    smoke
         resource.Maximize the browser window
         LoginPage.Verify the user is in the login page
         LoginPage.Verify there are 2 types of login present in this screen

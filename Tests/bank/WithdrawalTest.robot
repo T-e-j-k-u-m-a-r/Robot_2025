@@ -22,7 +22,7 @@ ${withdrawl_btn}                xpath://button[normalize-space()='Withdraw']
 
 *** Test Cases ***
 Test Customer Withdrawal Functionality
-        [Tags]    smoke     ui
+        [Tags]    smoke
         resource.Maximize the browser window
         LoginPage.Verify the user is in the login page
         LoginPage.Verify there are 2 types of login present in this screen
