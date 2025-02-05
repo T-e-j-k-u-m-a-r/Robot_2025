@@ -13,6 +13,15 @@ How to run all the robot files:
 
 		robot -d Results Tests/bank/LoginTest.robot
 
+---------------------------------------------------------------------------------------
+How to run the test script files with tag smoke? 
+
+		robot --include smoke Tests/bank/*.robot
+
+How to run the test script files with tag smoke and regression
+
+		robot --include smoke --include regression Tests/bank/*.robot
+
 ----------------------------------------------------------------------------------------
 
 PABOT commands: 
