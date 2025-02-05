@@ -17,8 +17,7 @@ ${home_menu_in_login_screen}    xpath://button[normalize-space()='Home']
 
 *** Keywords ***
 Open browser and launch the application url
-    [Arguments]         ${url}      ${browser}
-    Open Browser        ${url}      ${browser}
+    Open Browser        ${xyz_bank_url}       ${browser_name_headless}
     Sleep       2s
 
 Verify the user is in the login page

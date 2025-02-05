@@ -12,7 +12,7 @@ Resource        ../../Resources/bank/TransactionPage.robot
 Resource        ../../Resources/bank/WithdrawalPage.robot
 Resource        ../../Resources/resource.robot
 
-Test Setup          LoginPage.Open browser and launch the application url     ${xyz_bank_url}         ${browser_name_headed}
+Test Setup          LoginPage.Open browser and launch the application url
 Test Teardown       resource.Close the browser window
 
 *** Variables ***

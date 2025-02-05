@@ -5,7 +5,7 @@ Resource        ../../Resources/resource.robot
 Resource        ../../Resources/bank/CustomerPage.robot
 Resource        ../../Resources/bank/LoginPage.robot
 
-Test Setup          LoginPage.Open browser and launch the application url     ${xyz_bank_url}         ${browser_name_headed}
+Test Setup          LoginPage.Open browser and launch the application url
 Test Teardown       resource.Close the browser window
 
 *** Test Cases ***
