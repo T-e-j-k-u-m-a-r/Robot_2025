@@ -35,6 +35,11 @@ ${search_customer_input_box}       xpath://input[@placeholder='Search Customer']
 ${existing_customer}        Albus
 ${table_row_ele}           css:table.table tbody tr
 
+#Verify customer table contents variables
+${total_rows}       css:table.table tbody tr
+${total_columns}    css:table.table thead tr td
+${total_cells}      xpath://table[@class="table table-bordered table-striped"]//tbody//td
+${all_headers}          xpath://table[@class="table table-bordered table-striped"]//thead//tr//td
 
 *** Keywords ***
 #Bank manager login flow related keywords
@@ -147,4 +152,27 @@ verify the First name in the row 2 column 1 is same as the one entered in the se
 clear the search text input box
     Clear Element Text      ${search_customer_input_box}
     Sleep   2s
+
+#Verify customer table contents keywords
+
+print total number of rows
+     ${row_count}       Get Element Count       ${total_rows}
+     Log To Console     Total rows: ${row_count}
+
+
+print total number of columns
+    ${col_count}       Get Element Count       ${total_columns}
+    Log To Console     Total Columns: ${col_count}
+
+print all header values
+    ${header_list}      Get WebElements       ${all_headers}
+    FOR    ${header}    IN    @{header_list}
+        ${header_text}    Get Text    ${header}
+        Log    ${header_text}
+    END
+
+print total cells in the table
+    ${cell_count}       Get Element Count       ${total_columns}
+    Log To Console      Total Cell Values: ${cell_count}
+
 
