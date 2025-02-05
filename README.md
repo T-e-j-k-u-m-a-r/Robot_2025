@@ -14,13 +14,17 @@ How to run all the robot files:
 		robot -d Results Tests/bank/LoginTest.robot
 
 ---------------------------------------------------------------------------------------
-How to run the test script files with tag smoke? 
+How to run all the test script files with tag smoke? 
 
 		robot --include smoke Tests/bank/*.robot
 
-How to run the test script files with tag smoke and regression
+How to run all the test script files with tag smoke and regression
 
 		robot --include smoke --include regression Tests/bank/*.robot
+
+How to run all the test script files with tags and also rename the report name as "Automation report"
+
+		robot -d Results --include smoke --reporttitle "Automation Report" Tests/bank/*.robot
 
 ----------------------------------------------------------------------------------------
 
