@@ -12,6 +12,8 @@ Test Teardown   Close Browser
 
 *** Test Cases ***
 TC01:Handling Web Tables
+    [documentation]  This test case demonstrates the handling of web tables
+    [tags]           smoke
     WebtablePage.Maximize the browser window
     WebtablePage.Print the table name
     WebtablePage.Print the total rows
